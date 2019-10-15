@@ -1,6 +1,8 @@
 package com.example.demo.test;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author 640804
@@ -53,6 +55,10 @@ public class SortTest {
     }
 
     public static void quickSort(int[] arr,int start,int end){
+        HashMap map = new HashMap();
+        map.put("aaa","bbb");
+        Arrays.sort(arr);
+
         int i=start;
         int j=end;
         int k=arr[start];
@@ -74,8 +80,8 @@ public class SortTest {
             }
 
             arr[i]=k;
-            if(i-1>start) quickSort(arr,0,i-1);
-            if(j+1 < end) quickSort(arr,j+1,end);
+            if(i-1>start) {quickSort(arr,0,i-1);}
+            if(j+1 < end) {quickSort(arr,j+1,end);}
         }
     }
 
@@ -84,6 +90,10 @@ public class SortTest {
         arr[i]=arr[j];
         arr[j]=temp;
     }
+
+    //堆中的数据从数组下标为0 的位置开始存储。
+    //如果节点的下标是 i，那左子节点的下标就是 2∗i+1，
+    // 右子节点的下标就是 2∗i+2，父节点的下标就是 i−12。
     public static int[] heapSort(int[] arr){
         int len =arr.length;
          buildMaxHeap(arr);

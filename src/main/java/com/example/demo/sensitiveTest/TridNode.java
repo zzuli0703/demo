@@ -1,7 +1,9 @@
 package com.example.demo.sensitiveTest;
 
+
 import java.util.HashMap;
 import java.util.Map;
+
 
 /**
  * @author 640804
@@ -13,7 +15,7 @@ import java.util.Map;
 public class TridNode {
     //定义字典树
     //key下一个字符，value是对应的节点
-    public Map<Character,TridNode> subNode= new HashMap<>();
+    public Map<Character,TridNode> subNode= new HashMap<Character,TridNode>();
 
     //true：关键词终结，false不是结尾继续
     public Boolean end =false;

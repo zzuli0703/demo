@@ -1,7 +1,7 @@
 package com.example.demo.sensitiveTest;
 
 
-import org.apache.commons.lang.CharUtils;
+//import org.apache.commons.lang.CharUtils;
 
 /**
  * @author 640804
@@ -18,7 +18,8 @@ public class TridNodeTest {
     public boolean isSymbol(char c) {
         int ic = (int) c;
         // 0x2E80-0x9FFF 东亚文字范围
-        return !CharUtils.isAsciiAlphanumeric(c) && (ic < 0x2E80 || ic > 0x9FFF);
+        //return !CharUtils.isAsciiAlphanumeric(c) && (ic < 0x2E80 || ic > 0x9FFF);
+        return true;
     }
 
     //添加关键字
